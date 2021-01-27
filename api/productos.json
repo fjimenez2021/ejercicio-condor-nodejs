@@ -1,0 +1,22 @@
+[
+    {
+        "referencia": "0001",
+        "nombre": "Cocacola",
+        "precio": 0
+    },
+    {
+        "referencia": "0003",
+        "nombre": "BigCola Plus",
+        "precio": 8000
+    },
+    {
+        "referencia": "0002",
+        "nombre": "Pepsi",
+        "precio": 2000
+    },
+    {
+        "referencia": "0004",
+        "nombre": "Agua",
+        "precio": 5000
+    }
+]

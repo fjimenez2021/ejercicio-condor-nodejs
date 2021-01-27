@@ -1,0 +1,8 @@
+{
+  "mongoURI": "mongodb+srv://test:!Condor2021@gettingstarted.mjsly.mongodb.net/inventario?retryWrites=true&w=majority",
+  "MYSQL_HOST": "localhost",
+  "MYSQL_USER": "root",
+  "MYSQL_PASSWORD": "!Condor2021",
+  "MYSQL_DB_NAME": "test",
+  "MYSQL_PORT": "3306"
+}

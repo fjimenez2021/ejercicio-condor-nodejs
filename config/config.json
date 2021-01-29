@@ -1,5 +1,9 @@
 {
-  "mongoURI": "mongodb+srv://test:!Condor2021@gettingstarted.mjsly.mongodb.net/inventario?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://test:%21Condor2021@gettingstarted.mjsly.mongodb.net/inventario?retryWrites=true&w=majority",
+  "MONGO_SRV": "mongodb+srv://test:%21Condor2021@gettingstarted.mjsly.mongodb.net/inventario?authSource=admin&replicaSet=atlas-82jou1-shard-0&readPreference=primary&ssl=true",
+  "MONGO_DATABASE": "inventario",
+  "MONGO_SSL": true,
+  "MONGO_READ_PREFERENCE":"primary",
   "MYSQL_HOST": "localhost",
   "MYSQL_USER": "root",
   "MYSQL_PASSWORD": "!Condor2021",

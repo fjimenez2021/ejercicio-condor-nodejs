@@ -1,12 +1,13 @@
 import * as mongodb from "../src/mongodb";
-
+import config from "../config/config.json";
 beforeAll(async (done) => {
-    await mongodb.connect();
+    console.log("uri: ",config.MONGO_SRV);
+    //await mongodb.connect();
     done();
 });
 
 afterAll(async (done) => {
-    await mongodb.close();
+    //await mongodb.close();
     done();
 });
 

@@ -1,6 +1,6 @@
 import config from "../config/config.json";
 beforeAll(async (done) => {
-    console.log("uri: ",config.MONGO_SRV);
+    console.log("uri: ","mongodb+srv://test:");
     //await mongodb.connect();
     done();
 });

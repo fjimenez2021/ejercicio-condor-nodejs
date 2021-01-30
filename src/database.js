@@ -3,6 +3,7 @@ import config from "../config/config.json";
 
 export async function connect (){
     try {
+        console.log("uri: ",config.MONGO_SRV);
         await mongoose.connect(config.MONGO_SRV, {
             useUnifiedTopology: true,
             useNewUrlParser: true,

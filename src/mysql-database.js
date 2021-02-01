@@ -1,5 +1,5 @@
 import knex from "knex";
-import config from "../config/config.json";
+import config from "../config/config";
 
 export var knexMysql = null;
 export async function connectMysql() {

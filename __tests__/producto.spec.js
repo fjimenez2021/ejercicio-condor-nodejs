@@ -1,5 +1,5 @@
 import * as productoService from "../src/services/ProductoService";
-import {connect,close} from "../src/database";
+import {connect,close} from "../src/mongodb";
 import productosJSON from "../api/productos.json";
 
 beforeAll(async (done) => {

@@ -1,5 +1,6 @@
 import * as studentService from "../src/services/StudentService";
 import {connectMysql,closeMysql} from "../src/mysql-database";
+import studentsJSON from "../api/students.json";
 
 beforeAll(async (done) => {
     await connectMysql();
@@ -12,6 +13,16 @@ afterAll(async (done) => {
 });
 
 describe("Filter function students", () => {
+    test("it should  add students from json", async (done) => {
+        for (const data of studentsJSON) {
+            let students = await studentService.findStudentByEmail(data.email);
+            if(students === null || students.length===0){
+                await studentService.createStudent(data);
+            }
+        }
+        done();
+    });
+
     test("it should get student by id", async (done) => {
         
         let input = 1;
@@ -24,6 +35,7 @@ describe("Filter function students", () => {
 
         done();
     });
+
     test("it should add student", async (done) => {
         
         let newStudent = {

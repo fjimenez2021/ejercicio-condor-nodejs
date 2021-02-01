@@ -18,6 +18,10 @@ export const deleteStudent = async (id)=>{
     return await knexMysql(TABLE).where(FILTER_ID, id).del();
 };
 
+export const findAllStudent = async ()=>{
+    return await knexMysql.select(COLUMNS).from(TABLE);
+};
+
 export const findStudentById = async (id)=>{
     return await knexMysql.select(COLUMNS).from(TABLE).where(FILTER_ID, id);
 };

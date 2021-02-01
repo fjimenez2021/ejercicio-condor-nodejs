@@ -1,12 +1,8 @@
-import config from "../config/config.json";
 beforeAll(async (done) => {
-    console.log("uri: ","mongodb+srv://test:");
-    //await mongodb.connect();
     done();
 });
 
 afterAll(async (done) => {
-    //await mongodb.close();
     done();
 });
 

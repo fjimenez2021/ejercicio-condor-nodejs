@@ -34,7 +34,7 @@
     "graphql-tools": "^7.0.2",
     "knex": "^0.21.16",
     "mongoose": "^5.11.13",
-    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "node-fetch": "^2.6.1",
     "redis": "^3.0.2",
     "rimraf": "^3.0.2"

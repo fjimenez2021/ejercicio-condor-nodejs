@@ -11,7 +11,7 @@ export async function connectMysql() {
                 user: config.MYSQL_USER,
                 password: config.MYSQL_PASSWORD,
                 database: config.MYSQL_DB_NAME,
-                port: config.MYSQL_PORT || 3306
+                port: parseInt((config.MYSQL_PORT || 3306))
             },
             pool: {
                 min: 0,

@@ -4,6 +4,7 @@ import config from "../config/config";
 export var knexMysql = null;
 export async function connectMysql() {
     try {
+        console.log("config: ",config)
         knexMysql = await knex({
             client: 'mysql',
             connection: {

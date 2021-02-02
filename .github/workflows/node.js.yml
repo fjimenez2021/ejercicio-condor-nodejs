@@ -27,11 +27,11 @@ jobs:
       MONGO_SSL: true
       MONGO_REPLICA_SET: atlas-82jou1-shard-0
       MONGO_AUTH_SOURCE: admin
-      MYSQL_HOST: mysql-test.c2elpotu3iw2.us-east-1.rds.amazonaws.com
-      MYSQL_USER: admin
+      MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
+      MYSQL_USER: ${{ secrets.MYSQL_USER }}
       MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
-      MYSQL_DB_NAME: school
-      MYSQL_PORT: 3306
+      MYSQL_DB_NAME: ${{ secrets.MYSQL_DB_NAME }}
+      MYSQL_PORT: ${{ secrets.MYSQL_PORT }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}

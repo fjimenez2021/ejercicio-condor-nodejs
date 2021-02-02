@@ -13,13 +13,13 @@ export async function connectMysql() {
                 database: config.MYSQL_DB_NAME,
                 port: config.MYSQL_PORT || 3306
             },
-            pool:{
-                min : 0,
-                max:10
+            pool: {
+                min: 0,
+                max: 10
             }
         });
-
-        // Note: here we are getting the Mysql credentials from process.env
+        
+        await knexMysql.raw('select 1+1 as result');
         console.log(">>> DB Mysql is connected");
     } catch (e) {
         console.error("Error connected DB Mysql");

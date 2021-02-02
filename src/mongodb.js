@@ -3,8 +3,7 @@ import config from "../config/config";
 
 export async function connect (){
     try {
-        let srv = await rutaSrv();
-        await mongoose.connect(srv, {
+        await mongoose.connect(config.MONGO_SRV, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
             useCreateIndex: true,
@@ -25,9 +24,4 @@ export async function close (){
         console.error("Error to disconnect DB");
         console.error(e);
     }
-}
-
-async function rutaSrv (){
-    let srv = `mongodb+srv://${config.MONGO_USER}:${config.MONGO_PASSWORD}@${config.MONGO_HOST}/${config.MONGO_DB_NAME}?retryWrites=true&w=majority`
-    return srv;
 }

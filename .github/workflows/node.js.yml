@@ -18,15 +18,7 @@ jobs:
         node-version: [10.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     env:
-      MONGO_HOST: gettingstarted.mjsly.mongodb.net
-      MONGO_USER: test
-      MONGO_PASSWORD: Condor2021
-      MONGO_DB_NAME: inventario
-      MONGO_PORT: 27017
-      MONGO_READ_PREFERENCE: primary
-      MONGO_SSL: true
-      MONGO_REPLICA_SET: atlas-82jou1-shard-0
-      MONGO_AUTH_SOURCE: admin
+      MONGO_SRV: ${{ secrets.MONGO_SRV}}
       MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
       MYSQL_USER: ${{ secrets.MYSQL_USER }}
       MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}

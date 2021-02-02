@@ -17,9 +17,8 @@ jobs:
       matrix:
         node-version: [10.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-    environment:
-      name: Development
-      url: https://github.com
+    env:
+      MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}

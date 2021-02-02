@@ -1,7 +1,5 @@
-import config from "../config/config";
 
 beforeAll(async (done) => {
-    console.log("MS Pass: ",process.env);
     done();
 });
 

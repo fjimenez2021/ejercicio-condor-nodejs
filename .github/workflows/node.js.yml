@@ -20,7 +20,7 @@ jobs:
     env:
       MONGO_HOST: gettingstarted.mjsly.mongodb.net
       MONGO_USER: test
-      MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+      MONGO_PASSWORD: Condor2021
       MONGO_DB_NAME: inventario
       MONGO_PORT: 27017
       MONGO_READ_PREFERENCE: primary
@@ -40,4 +40,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test -- student
+    - run: npm test -- producto

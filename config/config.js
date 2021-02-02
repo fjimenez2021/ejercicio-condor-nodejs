@@ -17,7 +17,7 @@ module.exports = {
     MONGO_DB_NAME: process.env.MONGO_DB_NAME || 'admin',
     MONGO_PORT: process.env.MYSQL_PORT || 27017 ,
     MONGO_READ_PREFERENCE:process.env.MONGO_READ_PREFERENCE || 'secondaryPreferred',
-    MONGO_SSL: process.env.MONGO_SSL || false,
+    MONGO_SSL: Boolean((process.env.MONGO_SSL || false)),
     MONGO_REPLICA_SET:process.env.MONGO_REPLICA_SET || '',
     MONGO_AUTH_SOURCE: process.env.MONGO_AUTH_SOURCE || 'admin',
 

@@ -18,7 +18,12 @@ jobs:
         node-version: [10.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     env:
-      MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
+      MYSQL_HOST: mysql-test.c2elpotu3iw2.us-east-1.rds.amazonaws.com
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+      MYSQL_DB_NAME: school
+      MYSQL_PORT: 3306
+    run:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}

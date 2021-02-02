@@ -8,7 +8,7 @@ beforeAll(async (done) => {
 });
 
 afterAll(async (done) => {
-    await closeMysql();
+    //await closeMysql();
     done();
 });
 

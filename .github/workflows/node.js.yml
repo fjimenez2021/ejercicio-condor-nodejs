@@ -20,7 +20,7 @@ jobs:
     env:
       MONGO_HOST: gettingstarted.mjsly.mongodb.net
       MONGO_USER: test
-      MONGO_PASSWORD: Condor2021
+      MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
       MONGO_DB_NAME: inventario
       MONGO_PORT: 27017
       MONGO_READ_PREFERENCE: primary

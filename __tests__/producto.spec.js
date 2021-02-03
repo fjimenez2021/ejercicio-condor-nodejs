@@ -1,3 +1,4 @@
+//import 'regenerator-runtime/runtime';
 import * as productoService from "../src/services/ProductoService";
 import {connect,close} from "../src/mongodb";
 import productosJSON from "../api/productos.json";

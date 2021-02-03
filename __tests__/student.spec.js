@@ -1,3 +1,4 @@
+//import 'regenerator-runtime/runtime';
 import * as studentService from "../src/services/StudentService";
 import {connectMysql,closeMysql} from "../src/mysql-database";
 import studentsJSON from "../api/students.json";

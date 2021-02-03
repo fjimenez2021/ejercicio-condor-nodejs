@@ -20,8 +20,9 @@
     ],
     "verbose": false,
     "testEnvironment": "node",
-    "collectCoverage": false,
-    "testTimeout": 10000
+    "testTimeout": 10000,
+    "collectCoverage": true,
+    "coverageReporters": ["html"]
   },
   "author": "fjimenez",
   "license": "ISC",

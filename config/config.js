@@ -1,15 +1,3 @@
-import dotenv from "dotenv";
-
-try {
-    const result = dotenv.config({silent: true});
-    if (result.error) {
-        throw result.error;
-    }
-} catch (error) {
-    console.log("Not found .env >>")
-}
-/*const { env: envs } = process;
-module.exports = envs;*/
 module.exports = {
     MONGO_SRV: process.env.MONGO_SRV || 'mongodb+srv:://username:password@cluster0-jtpxd.mongodb.net/admin', 
     MYSQL_HOST: process.env.MYSQL_HOST || '127.0.0.0', 

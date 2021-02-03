@@ -22,7 +22,7 @@
     "testEnvironment": "node",
     "testTimeout": 10000,
     "collectCoverage": true,
-    "coverageReporters": ["html", "lcov"]
+    "coverageReporters": ["html"]
   },
   "author": "fjimenez",
   "license": "ISC",

@@ -36,46 +36,30 @@ routerStudent.post("/students",async (req,res)=>{
 
 routerStudent.put("/students/:id", async (req, res) => {
     let id = req.params.id;
-    let students = await studentService.findStudentById(id);
-    if (students === null || students.length === 0) {
-        res.status(404).send({ error: `Student with ${id} not found` });
-    } else {
-        let estudent = req.body;
-        studentService.updateStudent(id,estudent).then((result)=>{
+    let estudent = req.body;
+    studentService.updateStudent(id,estudent).then((result)=>{
+        if(result===1){
             res.status(200).json(estudent);
-        }).catch((err)=>{
-            res.status(500).send({ error: err, message: err.message });
-        });
-    }
-});
-
-routerStudent.put("/students/:id", async (req, res) => {
-    let id = req.params.id;
-    let students = await studentService.findStudentById(id);
-    if (students === null || students.length === 0) {
-        res.status(500).send({ error: `Student with ${id} not found` });
-    } else {
-        let estudent = req.body;
-        studentService.updateStudent(id,estudent).then((result)=>{
-            res.status(200).json(estudent);
-        }).catch((err)=>{
-            res.status(500).send({ error: err, message: err.message });
-        });
-    }
+        }else{
+            res.status(404).send({ error: `Student with ${id} not found` });
+        }
+    }).catch((err)=>{
+        res.status(500).send({ error: err, message: err.message });
+    });
 });
 
 routerStudent.delete("/students/:id", async (req, res) => {
     let id = req.params.id;
-    let students = await studentService.findStudentById(id);
-    if (students === null || students.length === 0) {
-        res.status(201).send("No Content");
-    } else {
-        studentService.deleteStudent(id).then((result)=>{
+    studentService.deleteStudent(id).then((result)=>{
+        if(result===1){
             res.sendStatus(200);
-        }).catch((err)=>{
-            res.status(500).send({ error: err, message: err.message });
-        });
-    }
+        }else{
+            res.status(201).send("No Content");
+        }
+        res.sendStatus(200);
+    }).catch((err)=>{
+        res.status(500).send({ error: err, message: err.message });
+    });
 });
 
 module.exports = routerStudent;
